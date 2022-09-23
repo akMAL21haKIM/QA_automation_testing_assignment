@@ -3,6 +3,9 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${login_button}    //button[@id='dt_login_button']
+${email}    //input[@type='email']
+${password}    //input[@type='password']
+
 
 *** Test Cases ***
 Login To Deriv
@@ -11,8 +14,8 @@ Login To Deriv
     Wait Until Page Contains Element    //div[@class='btn-purchase__text_wrapper' and contains(.,'Rise')]    30
     Click Element    dt_login_button
     Wait Until Page Contains Element    //input[@type='email']    30
-    Input Text    //input[@type='email']    akmal.hakim+3@besquare.com.my
-    Input Text    //input[@type='password']    Test1234  
+    Input Text    //input[@type='email']    ${email}
+    Input Text    //input[@type='password']    ${password}  
     Click Element    //button[@type='submit']
     Wait Until Page Does Not Contain Element    //*[@aria-label="Loading interface..."]    30
     Wait Until Page Contains Element    dt_core_account-info_acc-info    30
@@ -60,6 +63,12 @@ Test With 1 USD
     Wait Until Page Contains Element    //*[@class='dc-input-wrapper__input input--has-inline-prefix input trade-container__input' and @value=1]    30
     Click Element    //*[@class='dc-dropdown__display dc-dropdown__display--no-border']
     Wait Until Page Contains Element    //*[@class='dc-themed-scrollbars dc-themed-scrollbars__autohide']    30
+    Wait Until Page Contains Element    //*[@id='20' and contains(.,'x20')]    30
+    Wait Until Page Contains Element    //*[@id='40' and contains(.,'x40')]    30
+    Wait Until Page Contains Element    //*[@id='60' and contains(.,'x60')]    30
+    Wait Until Page Contains Element    //*[@id='100' and contains(.,'x100')]    30
+    Wait Until Page Contains Element    //*[@id='200' and contains(.,'x200')]    30
+
 
 Test With 2000 USD
     Click Element    //*[@class='dc-input-wrapper__input input--has-inline-prefix input trade-container__input']
@@ -72,6 +81,11 @@ Test With 2000 USD
     Wait Until Page Contains Element    //*[@class='dc-input-wrapper__input input--has-inline-prefix input trade-container__input' and @value=2000]    30
     Click Element    //*[@class='dc-dropdown__display dc-dropdown__display--no-border']
     Wait Until Page Contains Element    //*[@class='dc-themed-scrollbars dc-themed-scrollbars__autohide']    30
+    Wait Until Page Contains Element    //*[@id='20' and contains(.,'x20')]    30
+    Wait Until Page Contains Element    //*[@id='40' and contains(.,'x40')]    30
+    Wait Until Page Contains Element    //*[@id='60' and contains(.,'x60')]    30
+    Wait Until Page Contains Element    //*[@id='100' and contains(.,'x100')]    30
+    Wait Until Page Contains Element    //*[@id='200' and contains(.,'x200')]    30
 
 Set Stake
     Click Element    //*[@class='dc-input-wrapper__input input--has-inline-prefix input trade-container__input']
@@ -79,7 +93,7 @@ Set Stake
     Press Keys    none    999
     Wait Until Page Contains Element    //*[@class='dc-input-wrapper__input input--has-inline-prefix input trade-container__input' and @value=999]    30
 
-Buy Contract With Deal Cancellation
+Buy/Sell Contract With Deal Cancellation
     Wait Until Page Contains Element    //*[@class='trade-container__fieldset' and contains(.,'Deal cancellation')]    30
     Click Element    //*[@class='trade-container__fieldset' and contains(.,'Deal cancellation')]
     Wait Until Page Contains Element    //*[@class='dc-icon dc-icon--active']    30
@@ -98,7 +112,7 @@ Buy Contract With Deal Cancellation
     Wait Until Page Contains Element    //*[@class='dc-input-wrapper--inline' and contains(.,'Deal cancellation')]    30
     Click Element    //*[@class='dc-input-wrapper--inline' and contains(.,'Deal cancellation')]
 
-Buy Contract With Take Profit
+Buy/Sell Contract With Take Profit
     Wait Until Page Contains Element    //*[@class='dc-checkbox take_profit-checkbox__input']    30
     Click Element    //*[@class='dc-checkbox take_profit-checkbox__input']
     Wait Until Page Contains Element    //*[@class='dc-icon dc-icon--active']    30
@@ -121,7 +135,7 @@ Buy Contract With Take Profit
     Wait Until Page Contains Element    //*[@class='dc-checkbox take_profit-checkbox__input']    30
     Click Element    //*[@class='dc-checkbox take_profit-checkbox__input']
 
-Buy Contract With Stop Loss
+Buy/Sell Contract With Stop Loss
     Wait Until Page Contains Element    //*[@class='dc-checkbox stop_loss-checkbox__input']    30
     Click Element    //*[@class='dc-checkbox stop_loss-checkbox__input']
     Wait Until Page Contains Element    //*[@class='dc-icon dc-icon--active']    30

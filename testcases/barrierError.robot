@@ -3,6 +3,9 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${login_button}    //button[@id='dt_login_button']
+${email}    //input[@type='email']
+${password}    //input[@type='password']
+
 
 *** Test Cases ***
 Login To Deriv
@@ -11,8 +14,8 @@ Login To Deriv
     Wait Until Page Contains Element    //div[@class='btn-purchase__text_wrapper' and contains(.,'Rise')]    30
     Click Element    dt_login_button
     Wait Until Page Contains Element    //input[@type='email']    30
-    Input Text    //input[@type='email']    akmal.hakim+3@besquare.com.my
-    Input Text    //input[@type='password']    Test1234  
+    Input Text    //input[@type='email']    ${email}
+    Input Text    //input[@type='password']    ${password}  
     Click Element    //button[@type='submit']
     Wait Until Page Does Not Contain Element    //*[@aria-label="Loading interface..."]    30
     Wait Until Page Contains Element    dt_core_account-info_acc-info    30
