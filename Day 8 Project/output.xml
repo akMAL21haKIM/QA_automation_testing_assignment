@@ -1,0 +1,1712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220923 09:27:57.069" rpa="false" schemaversion="3">
+<suite id="s1" name="APItoken" source="/home/akmal/Documents/RF/Day 8 Project/APItoken.robot">
+<test id="s1-t1" name="Login To Deriv" line="16">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://app.deriv.com/account/api-token/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 09:27:57.160" level="INFO">Opening browser 'chrome' to base url 'https://app.deriv.com/account/api-token/'.</msg>
+<status status="PASS" starttime="20220923 09:27:57.159" endtime="20220923 09:27:59.994"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220923 09:27:59.995" endtime="20220923 09:28:00.099"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@id='oa_social_login_container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:00.099" endtime="20220923 09:28:03.038"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:03.038" endtime="20220923 09:28:03.046"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:03.046" level="INFO">Typing text 'akmal.hakim+3@besquare.com.my' into text field '//input[@type='email']'.</msg>
+<status status="PASS" starttime="20220923 09:28:03.046" endtime="20220923 09:28:03.104"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:03.105" level="INFO">Typing text 'Test1234' into text field '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20220923 09:28:03.104" endtime="20220923 09:28:03.159"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:03.159" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220923 09:28:03.159" endtime="20220923 09:28:05.012"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>//*[@aria-label="Loading interface..."]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:05.013" endtime="20220923 09:28:09.799"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>dt_core_account-info_acc-info</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:09.799" endtime="20220923 09:28:09.819"/>
+</kw>
+<status status="PASS" starttime="20220923 09:27:57.159" endtime="20220923 09:28:09.819"/>
+</test>
+<test id="s1-t2" name="Check The Checkboxes Containers" line="27">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220923 09:28:09.820" endtime="20220923 09:28:09.820"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>//*[@aria-label="Loading interface..."]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:09.821" endtime="20220923 09:28:10.326"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-page-overlay__header-title' and contains(.,'Settings')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:10.326" endtime="20220923 09:28:10.842"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-vertical-tab__tab dc-vertical-tab__tab--floating']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:10.843" endtime="20220923 09:28:11.357"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-vertical-tab__header dc-vertical-tab__header--floating dc-vertical-tab__header--active' and contains(.,'API token')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:11.357" endtime="20220923 09:28:11.874"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-vertical-tab__header dc-vertical-tab__header--floating dc-vertical-tab__header--active' and contains(.,'API token')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:11.875" level="INFO">Clicking element '//*[@class='dc-vertical-tab__header dc-vertical-tab__header--floating dc-vertical-tab__header--active' and contains(.,'API token')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:11.875" endtime="20220923 09:28:12.992"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-timeline__container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:12.993" endtime="20220923 09:28:13.516"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-timeline__oval' and contains(.,'1')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:13.516" endtime="20220923 09:28:14.034"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Read')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:14.035" endtime="20220923 09:28:14.557"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Trade')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:14.558" endtime="20220923 09:28:15.074"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Payments')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:15.074" endtime="20220923 09:28:15.590"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Trading information')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:15.590" endtime="20220923 09:28:16.104"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Admin')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:16.105" endtime="20220923 09:28:16.621"/>
+</kw>
+<status status="PASS" starttime="20220923 09:28:09.820" endtime="20220923 09:28:16.621"/>
+</test>
+<test id="s1-t3" name="Check The Checkboxes" line="42">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Read')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:16.623" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Read')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:16.623" endtime="20220923 09:28:17.700"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:17.701" endtime="20220923 09:28:18.224"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox composite-checkbox--active' and contains(.,'Read')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:18.225" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox composite-checkbox--active' and contains(.,'Read')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:18.224" endtime="20220923 09:28:19.293"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Trade')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:19.294" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Trade')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:19.293" endtime="20220923 09:28:20.375"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:20.375" endtime="20220923 09:28:20.889"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox composite-checkbox--active' and contains(.,'Trade')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:20.890" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox composite-checkbox--active' and contains(.,'Trade')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:20.890" endtime="20220923 09:28:21.937"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Payments')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:21.937" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Payments')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:21.937" endtime="20220923 09:28:22.997"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:22.997" endtime="20220923 09:28:23.508"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox composite-checkbox--active' and contains(.,'Payments')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:23.509" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox composite-checkbox--active' and contains(.,'Payments')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:23.509" endtime="20220923 09:28:24.555"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Trading information')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:24.556" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Trading information')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:24.556" endtime="20220923 09:28:25.618"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:25.619" endtime="20220923 09:28:26.131"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox composite-checkbox--active' and contains(.,'Trading information')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:26.132" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox composite-checkbox--active' and contains(.,'Trading information')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:26.131" endtime="20220923 09:28:27.188"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Admin')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:27.189" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Admin')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:27.188" endtime="20220923 09:28:28.247"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:28.248" endtime="20220923 09:28:28.764"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox composite-checkbox--active' and contains(.,'Admin')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:28.765" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox composite-checkbox--active' and contains(.,'Admin')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:28.764" endtime="20220923 09:28:29.829"/>
+</kw>
+<status status="PASS" starttime="20220923 09:28:16.622" endtime="20220923 09:28:29.830"/>
+</test>
+<test id="s1-t4" name="Create Tokens" line="59">
+<kw name="Create Token" library="resources">
+<arg>${read_token}</arg>
+<arg>Read</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-timeline__container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:29.832" endtime="20220923 09:28:30.342"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-timeline__oval' and contains(.,'2')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:30.343" endtime="20220923 09:28:30.859"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-input__field' and @aria-label='Token name']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:30.860" endtime="20220923 09:28:31.376"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and @disabled]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:31.376" endtime="20220923 09:28:31.899"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'${scope}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:31.900" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Read')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:31.899" endtime="20220923 09:28:32.953"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:32.953" endtime="20220923 09:28:33.467"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-input__field' and @aria-label='Token name']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:33.467" level="INFO">Clicking element '//*[@class='dc-input__field' and @aria-label='Token name']'.</msg>
+<status status="PASS" starttime="20220923 09:28:33.467" endtime="20220923 09:28:34.524"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='text']</arg>
+<arg>${whichToken}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:34.525" level="INFO">Typing text 'Read Token' into text field '//input[@type='text']'.</msg>
+<status status="PASS" starttime="20220923 09:28:34.524" endtime="20220923 09:28:36.200"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:36.200" endtime="20220923 09:28:36.717"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:36.718" level="INFO">Clicking element '//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:36.717" endtime="20220923 09:28:37.789"/>
+</kw>
+<status status="PASS" starttime="20220923 09:28:29.832" endtime="20220923 09:28:37.790"/>
+</kw>
+<kw name="Create Token" library="resources">
+<arg>${trade_token}</arg>
+<arg>Trade</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-timeline__container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:37.791" endtime="20220923 09:28:38.307"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-timeline__oval' and contains(.,'2')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:38.308" endtime="20220923 09:28:38.821"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-input__field' and @aria-label='Token name']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:38.821" endtime="20220923 09:28:39.330"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and @disabled]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:39.330" endtime="20220923 09:28:39.843"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'${scope}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:39.844" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Trade')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:39.843" endtime="20220923 09:28:40.903"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:40.904" endtime="20220923 09:28:41.418"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-input__field' and @aria-label='Token name']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:41.418" level="INFO">Clicking element '//*[@class='dc-input__field' and @aria-label='Token name']'.</msg>
+<status status="PASS" starttime="20220923 09:28:41.418" endtime="20220923 09:28:42.486"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='text']</arg>
+<arg>${whichToken}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:42.487" level="INFO">Typing text 'Trade Token' into text field '//input[@type='text']'.</msg>
+<status status="PASS" starttime="20220923 09:28:42.487" endtime="20220923 09:28:44.121"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:44.121" endtime="20220923 09:28:44.635"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:44.635" level="INFO">Clicking element '//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:44.635" endtime="20220923 09:28:45.700"/>
+</kw>
+<status status="PASS" starttime="20220923 09:28:37.790" endtime="20220923 09:28:45.701"/>
+</kw>
+<kw name="Create Token" library="resources">
+<arg>${payments_token}</arg>
+<arg>Payments</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-timeline__container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:45.702" endtime="20220923 09:28:46.219"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-timeline__oval' and contains(.,'2')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:46.219" endtime="20220923 09:28:46.733"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-input__field' and @aria-label='Token name']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:46.733" endtime="20220923 09:28:47.241"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and @disabled]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:47.241" endtime="20220923 09:28:47.754"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'${scope}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:47.755" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Payments')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:47.754" endtime="20220923 09:28:48.812"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:48.813" endtime="20220923 09:28:49.321"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-input__field' and @aria-label='Token name']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:49.322" level="INFO">Clicking element '//*[@class='dc-input__field' and @aria-label='Token name']'.</msg>
+<status status="PASS" starttime="20220923 09:28:49.322" endtime="20220923 09:28:50.376"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='text']</arg>
+<arg>${whichToken}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:50.377" level="INFO">Typing text 'Payments Token' into text field '//input[@type='text']'.</msg>
+<status status="PASS" starttime="20220923 09:28:50.376" endtime="20220923 09:28:52.063"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:52.063" endtime="20220923 09:28:52.578"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:52.579" level="INFO">Clicking element '//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:52.578" endtime="20220923 09:28:53.652"/>
+</kw>
+<status status="PASS" starttime="20220923 09:28:45.701" endtime="20220923 09:28:53.652"/>
+</kw>
+<kw name="Create Token" library="resources">
+<arg>${trading_information_token}</arg>
+<arg>Trading information</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-timeline__container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:53.654" endtime="20220923 09:28:54.170"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-timeline__oval' and contains(.,'2')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:54.170" endtime="20220923 09:28:54.684"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-input__field' and @aria-label='Token name']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:54.684" endtime="20220923 09:28:55.193"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and @disabled]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:55.193" endtime="20220923 09:28:55.706"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'${scope}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:55.707" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Trading information')]'.</msg>
+<status status="PASS" starttime="20220923 09:28:55.706" endtime="20220923 09:28:56.774"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:28:56.774" endtime="20220923 09:28:57.291"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-input__field' and @aria-label='Token name']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:57.292" level="INFO">Clicking element '//*[@class='dc-input__field' and @aria-label='Token name']'.</msg>
+<status status="PASS" starttime="20220923 09:28:57.292" endtime="20220923 09:28:58.351"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='text']</arg>
+<arg>${whichToken}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220923 09:28:58.352" level="INFO">Typing text 'Trading information Token' into text field '//input[@type='text']'.</msg>
+<status status="PASS" starttime="20220923 09:28:58.351" endtime="20220923 09:29:00.091"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:00.092" endtime="20220923 09:29:00.606"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:00.606" level="INFO">Clicking element '//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]'.</msg>
+<status status="PASS" starttime="20220923 09:29:00.606" endtime="20220923 09:29:01.678"/>
+</kw>
+<status status="PASS" starttime="20220923 09:28:53.653" endtime="20220923 09:29:01.678"/>
+</kw>
+<kw name="Create Token" library="resources">
+<arg>${admin_token}</arg>
+<arg>Admin</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-timeline__container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:01.679" endtime="20220923 09:29:02.193"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-timeline__oval' and contains(.,'2')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:02.193" endtime="20220923 09:29:02.708"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-input__field' and @aria-label='Token name']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:02.708" endtime="20220923 09:29:03.216"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and @disabled]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:03.216" endtime="20220923 09:29:03.729"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'${scope}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:03.730" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Admin')]'.</msg>
+<status status="PASS" starttime="20220923 09:29:03.729" endtime="20220923 09:29:04.792"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:04.793" endtime="20220923 09:29:05.308"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-input__field' and @aria-label='Token name']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:05.309" level="INFO">Clicking element '//*[@class='dc-input__field' and @aria-label='Token name']'.</msg>
+<status status="PASS" starttime="20220923 09:29:05.308" endtime="20220923 09:29:06.365"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='text']</arg>
+<arg>${whichToken}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:06.366" level="INFO">Typing text 'Admin Token' into text field '//input[@type='text']'.</msg>
+<status status="PASS" starttime="20220923 09:29:06.365" endtime="20220923 09:29:08.035"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:08.035" endtime="20220923 09:29:08.550"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:08.550" level="INFO">Clicking element '//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]'.</msg>
+<status status="PASS" starttime="20220923 09:29:08.550" endtime="20220923 09:29:09.619"/>
+</kw>
+<status status="PASS" starttime="20220923 09:29:01.678" endtime="20220923 09:29:09.620"/>
+</kw>
+<status status="PASS" starttime="20220923 09:28:29.831" endtime="20220923 09:29:09.620"/>
+</test>
+<test id="s1-t5" name="Create All Scopes Token" line="126">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-timeline__container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:09.622" endtime="20220923 09:29:10.136"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-timeline__oval' and contains(.,'2')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:10.136" endtime="20220923 09:29:10.648"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-input__field' and @aria-label='Token name']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:10.649" endtime="20220923 09:29:11.155"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and @disabled]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:11.156" endtime="20220923 09:29:11.667"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Read')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:11.668" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Read')]'.</msg>
+<status status="PASS" starttime="20220923 09:29:11.668" endtime="20220923 09:29:12.737"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:12.737" endtime="20220923 09:29:13.253"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Trade')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:13.254" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Trade')]'.</msg>
+<status status="PASS" starttime="20220923 09:29:13.253" endtime="20220923 09:29:14.321"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:14.322" endtime="20220923 09:29:14.828"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Payments')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:14.829" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Payments')]'.</msg>
+<status status="PASS" starttime="20220923 09:29:14.829" endtime="20220923 09:29:15.901"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:15.902" endtime="20220923 09:29:16.412"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Trading information')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:16.413" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Trading information')]'.</msg>
+<status status="PASS" starttime="20220923 09:29:16.413" endtime="20220923 09:29:17.475"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:17.475" endtime="20220923 09:29:17.987"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Admin')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:17.988" level="INFO">Clicking element '//div[@class='composite-checkbox api-token__checkbox' and contains(.,'Admin')]'.</msg>
+<status status="PASS" starttime="20220923 09:29:17.987" endtime="20220923 09:29:19.054"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-icon--active']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:19.054" endtime="20220923 09:29:19.567"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-input__field' and @aria-label='Token name']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:19.568" level="INFO">Clicking element '//*[@class='dc-input__field' and @aria-label='Token name']'.</msg>
+<status status="PASS" starttime="20220923 09:29:19.567" endtime="20220923 09:29:20.626"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='text']</arg>
+<arg>${all_scopes_token}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:20.628" level="INFO">Typing text 'All Scopes Token' into text field '//input[@type='text']'.</msg>
+<status status="PASS" starttime="20220923 09:29:20.627" endtime="20220923 09:29:22.356"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:22.356" endtime="20220923 09:29:22.869"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:22.870" level="INFO">Clicking element '//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button' and contains(.,'Create')]'.</msg>
+<status status="PASS" starttime="20220923 09:29:22.869" endtime="20220923 09:29:23.937"/>
+</kw>
+<status status="PASS" starttime="20220923 09:29:09.621" endtime="20220923 09:29:23.937"/>
+</test>
+<test id="s1-t6" name="Check Tokens" line="146">
+<kw name="Check Token" library="resources">
+<arg>${read_token}</arg>
+<arg>Read</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-timeline__container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:23.939" endtime="20220923 09:29:24.454"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-timeline__oval' and contains(.,'3')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:24.454" endtime="20220923 09:29:24.974"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header-row']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:24.974" endtime="20220923 09:29:25.491"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Name')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:25.491" endtime="20220923 09:29:26.008"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Token')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:26.008" endtime="20220923 09:29:26.530"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Scopes')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:26.530" endtime="20220923 09:29:27.047"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${whichToken}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:27.047" endtime="20220923 09:29:27.565"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-scope-cell' and contains(.,'${scope}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:27.565" endtime="20220923 09:29:28.082"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell' and contains(.,'Never')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:28.082" endtime="20220923 09:29:28.599"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__pass-dot-container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:28.599" endtime="20220923 09:29:29.117"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:29.117" endtime="20220923 09:29:29.634"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:29.635" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Read Token')]//*[@class='dc-icon da-api-token__visibility-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:29:29.634" endtime="20220923 09:29:30.712"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-text']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:30.713" endtime="20220923 09:29:31.247"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:31.248" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Read Token')]//*[@class='dc-icon da-api-token__visibility-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:29:31.247" endtime="20220923 09:29:32.309"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-clipboard']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:32.309" endtime="20220923 09:29:32.832"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon dc-clipboard']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:32.833" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Read Token')]//*[@class='dc-icon dc-clipboard']'.</msg>
+<status status="PASS" starttime="20220923 09:29:32.832" endtime="20220923 09:29:33.909"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-clipboard__popover dc-popover__bubble' and contains(.,'Token copied!')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:33.909" endtime="20220923 09:29:34.427"/>
+</kw>
+<status status="PASS" starttime="20220923 09:29:23.939" endtime="20220923 09:29:34.427"/>
+</kw>
+<kw name="Check Token" library="resources">
+<arg>${trade_token}</arg>
+<arg>Trade</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-timeline__container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:34.428" endtime="20220923 09:29:34.942"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-timeline__oval' and contains(.,'3')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:34.942" endtime="20220923 09:29:35.456"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header-row']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:35.456" endtime="20220923 09:29:35.963"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Name')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:35.963" endtime="20220923 09:29:36.477"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Token')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:36.477" endtime="20220923 09:29:36.990"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Scopes')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:36.990" endtime="20220923 09:29:37.504"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${whichToken}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:37.505" endtime="20220923 09:29:38.024"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-scope-cell' and contains(.,'${scope}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:38.025" endtime="20220923 09:29:38.543"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell' and contains(.,'Never')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:38.543" endtime="20220923 09:29:39.057"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__pass-dot-container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:39.058" endtime="20220923 09:29:39.572"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:39.572" endtime="20220923 09:29:40.086"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:40.087" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Trade Token')]//*[@class='dc-icon da-api-token__visibility-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:29:40.086" endtime="20220923 09:29:41.163"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-text']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:41.164" endtime="20220923 09:29:41.679"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:41.680" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Trade Token')]//*[@class='dc-icon da-api-token__visibility-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:29:41.679" endtime="20220923 09:29:42.738"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-clipboard']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:42.738" endtime="20220923 09:29:43.253"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon dc-clipboard']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:43.254" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Trade Token')]//*[@class='dc-icon dc-clipboard']'.</msg>
+<status status="PASS" starttime="20220923 09:29:43.253" endtime="20220923 09:29:44.338"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-clipboard__popover dc-popover__bubble' and contains(.,'Token copied!')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:44.338" endtime="20220923 09:29:44.853"/>
+</kw>
+<status status="PASS" starttime="20220923 09:29:34.427" endtime="20220923 09:29:44.854"/>
+</kw>
+<kw name="Check Token" library="resources">
+<arg>${payments_token}</arg>
+<arg>Payments</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-timeline__container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:44.855" endtime="20220923 09:29:45.366"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-timeline__oval' and contains(.,'3')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:45.367" endtime="20220923 09:29:45.881"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header-row']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:45.881" endtime="20220923 09:29:46.388"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Name')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:46.389" endtime="20220923 09:29:46.903"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Token')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:46.903" endtime="20220923 09:29:47.416"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Scopes')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:47.417" endtime="20220923 09:29:47.930"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${whichToken}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:47.930" endtime="20220923 09:29:48.448"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-scope-cell' and contains(.,'${scope}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:48.448" endtime="20220923 09:29:48.965"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell' and contains(.,'Never')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:48.965" endtime="20220923 09:29:49.480"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__pass-dot-container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:49.480" endtime="20220923 09:29:49.995"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:49.995" endtime="20220923 09:29:50.510"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:50.511" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Payments Token')]//*[@class='dc-icon da-api-token__visibility-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:29:50.510" endtime="20220923 09:29:51.581"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-text']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:51.581" endtime="20220923 09:29:52.097"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:52.098" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Payments Token')]//*[@class='dc-icon da-api-token__visibility-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:29:52.097" endtime="20220923 09:29:53.156"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-clipboard']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:53.156" endtime="20220923 09:29:53.670"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon dc-clipboard']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:29:53.671" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Payments Token')]//*[@class='dc-icon dc-clipboard']'.</msg>
+<status status="PASS" starttime="20220923 09:29:53.670" endtime="20220923 09:29:54.745"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-clipboard__popover dc-popover__bubble' and contains(.,'Token copied!')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:54.746" endtime="20220923 09:29:55.262"/>
+</kw>
+<status status="PASS" starttime="20220923 09:29:44.854" endtime="20220923 09:29:55.262"/>
+</kw>
+<kw name="Check Token" library="resources">
+<arg>${trading_information_token}</arg>
+<arg>Trading information</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-timeline__container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:55.263" endtime="20220923 09:29:55.774"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-timeline__oval' and contains(.,'3')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:55.775" endtime="20220923 09:29:56.289"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header-row']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:56.289" endtime="20220923 09:29:56.798"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Name')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:56.798" endtime="20220923 09:29:57.312"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Token')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:57.312" endtime="20220923 09:29:57.839"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Scopes')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:57.839" endtime="20220923 09:29:58.354"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${whichToken}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:58.354" endtime="20220923 09:29:58.871"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-scope-cell' and contains(.,'${scope}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:58.872" endtime="20220923 09:29:59.392"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell' and contains(.,'Never')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:59.393" endtime="20220923 09:29:59.906"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__pass-dot-container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:29:59.906" endtime="20220923 09:30:00.420"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:00.421" endtime="20220923 09:30:00.934"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:00.935" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Trading information Token')]//*[@class='dc-icon da-api-token__visibility-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:30:00.934" endtime="20220923 09:30:02.010"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-text']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:02.011" endtime="20220923 09:30:02.524"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:02.525" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Trading information Token')]//*[@class='dc-icon da-api-token__visibility-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:30:02.524" endtime="20220923 09:30:03.590"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-clipboard']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:03.591" endtime="20220923 09:30:04.105"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon dc-clipboard']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:04.106" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Trading information Token')]//*[@class='dc-icon dc-clipboard']'.</msg>
+<status status="PASS" starttime="20220923 09:30:04.106" endtime="20220923 09:30:05.183"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-clipboard__popover dc-popover__bubble' and contains(.,'Token copied!')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:05.184" endtime="20220923 09:30:05.698"/>
+</kw>
+<status status="PASS" starttime="20220923 09:29:55.262" endtime="20220923 09:30:05.698"/>
+</kw>
+<status status="PASS" starttime="20220923 09:29:23.938" endtime="20220923 09:30:05.699"/>
+</test>
+<test id="s1-t7" name="Check Admin Token" line="240">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-timeline__container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:05.701" endtime="20220923 09:30:06.212"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-timeline__oval' and contains(.,'3')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:06.213" endtime="20220923 09:30:06.727"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header-row']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:06.727" endtime="20220923 09:30:07.237"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Name')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:07.237" endtime="20220923 09:30:07.749"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Token')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:07.749" endtime="20220923 09:30:08.261"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Scopes')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:08.261" endtime="20220923 09:30:08.772"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${admin_token}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:08.773" endtime="20220923 09:30:09.287"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-scope-cell da-api-token__table-scope-cell-admin' and contains(.,'Admin')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:09.287" endtime="20220923 09:30:09.818"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell' and contains(.,'Never')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:09.818" endtime="20220923 09:30:10.331"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__pass-dot-container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:10.331" endtime="20220923 09:30:10.843"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:10.844" endtime="20220923 09:30:11.357"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:11.358" level="INFO">Clicking element '//*[@class='dc-icon da-api-token__visibility-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:30:11.357" endtime="20220923 09:30:12.422"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-text']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:12.423" endtime="20220923 09:30:12.935"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:12.936" level="INFO">Clicking element '//*[@class='dc-icon da-api-token__visibility-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:30:12.936" endtime="20220923 09:30:14.001"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-clipboard']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:14.001" endtime="20220923 09:30:14.513"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-clipboard']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:14.514" level="INFO">Clicking element '//*[@class='dc-icon dc-clipboard']'.</msg>
+<status status="PASS" starttime="20220923 09:30:14.513" endtime="20220923 09:30:15.583"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-modal']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:15.583" endtime="20220923 09:30:16.108"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'OK')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:16.109" endtime="20220923 09:30:16.625"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'OK')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:16.626" level="INFO">Clicking element '//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'OK')]'.</msg>
+<status status="PASS" starttime="20220923 09:30:16.625" endtime="20220923 09:30:17.696"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-clipboard__popover dc-popover__bubble' and contains(.,'Token copied!')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:17.696" endtime="20220923 09:30:18.213"/>
+</kw>
+<status status="PASS" starttime="20220923 09:30:05.700" endtime="20220923 09:30:18.213"/>
+</test>
+<test id="s1-t8" name="Check All Scopes Token" line="262">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='dc-timeline__container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:18.215" endtime="20220923 09:30:18.726"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-timeline__oval' and contains(.,'3')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:18.727" endtime="20220923 09:30:19.239"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header-row']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:19.239" endtime="20220923 09:30:19.754"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Name')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:19.754" endtime="20220923 09:30:20.269"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Token')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:20.270" endtime="20220923 09:30:20.782"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-header' and contains(.,'Scopes')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:20.782" endtime="20220923 09:30:21.307"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${all_scopes_token}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:21.307" endtime="20220923 09:30:21.823"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell' and contains(.,'Never')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:21.824" endtime="20220923 09:30:22.339"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__pass-dot-container']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:22.340" endtime="20220923 09:30:22.852"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:22.852" endtime="20220923 09:30:23.365"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${all_scopes_token}')]//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:23.366" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'All Scopes Token')]//*[@class='dc-icon da-api-token__visibility-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:30:23.365" endtime="20220923 09:30:24.436"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-text']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:24.436" endtime="20220923 09:30:24.950"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${all_scopes_token}')]//*[@class='dc-icon da-api-token__visibility-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:24.952" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'All Scopes Token')]//*[@class='dc-icon da-api-token__visibility-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:30:24.951" endtime="20220923 09:30:26.013"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-clipboard']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:26.014" endtime="20220923 09:30:26.526"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${all_scopes_token}')]//*[@class='dc-icon dc-clipboard']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:26.528" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'All Scopes Token')]//*[@class='dc-icon dc-clipboard']'.</msg>
+<status status="PASS" starttime="20220923 09:30:26.527" endtime="20220923 09:30:27.612"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-modal']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:27.612" endtime="20220923 09:30:28.130"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'OK')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:28.130" endtime="20220923 09:30:28.645"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'OK')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:28.646" level="INFO">Clicking element '//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'OK')]'.</msg>
+<status status="PASS" starttime="20220923 09:30:28.645" endtime="20220923 09:30:29.712"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-clipboard__popover dc-popover__bubble' and contains(.,'Token copied!')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:29.712" endtime="20220923 09:30:30.225"/>
+</kw>
+<status status="PASS" starttime="20220923 09:30:18.214" endtime="20220923 09:30:30.226"/>
+</test>
+<test id="s1-t9" name="Delete Tokens" line="284">
+<kw name="Delete Token" library="resources">
+<arg>${read_token}</arg>
+<arg>Read</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:30.228" endtime="20220923 09:30:30.738"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${whichToken}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:30.739" endtime="20220923 09:30:31.251"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-scope-cell' and contains(.,'${scope}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:31.251" endtime="20220923 09:30:31.778"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:31.778" endtime="20220923 09:30:32.290"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:32.291" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Read Token')]//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:30:32.290" endtime="20220923 09:30:33.368"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-modal__container dc-modal__container--small dc-modal__container--enter-done']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:33.368" endtime="20220923 09:30:33.890"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:33.890" endtime="20220923 09:30:34.407"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:34.408" level="INFO">Clicking element '//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]'.</msg>
+<status status="PASS" starttime="20220923 09:30:34.407" endtime="20220923 09:30:35.509"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${whichToken}')]</arg>
+<arg>30</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:35.509" endtime="20220923 09:30:36.035"/>
+</kw>
+<status status="PASS" starttime="20220923 09:30:30.227" endtime="20220923 09:30:36.035"/>
+</kw>
+<kw name="Delete Token" library="resources">
+<arg>${trade_token}</arg>
+<arg>Trade</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:36.036" endtime="20220923 09:30:36.547"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${whichToken}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:36.548" endtime="20220923 09:30:37.068"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-scope-cell' and contains(.,'${scope}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:37.068" endtime="20220923 09:30:37.580"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:37.581" endtime="20220923 09:30:38.094"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:38.095" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Trade Token')]//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:30:38.094" endtime="20220923 09:30:39.167"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-modal__container dc-modal__container--small dc-modal__container--enter-done']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:39.167" endtime="20220923 09:30:39.683"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:39.683" endtime="20220923 09:30:40.197"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:40.198" level="INFO">Clicking element '//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]'.</msg>
+<status status="PASS" starttime="20220923 09:30:40.197" endtime="20220923 09:30:41.260"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${whichToken}')]</arg>
+<arg>30</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:41.260" endtime="20220923 09:30:41.785"/>
+</kw>
+<status status="PASS" starttime="20220923 09:30:36.035" endtime="20220923 09:30:41.786"/>
+</kw>
+<kw name="Delete Token" library="resources">
+<arg>${payments_token}</arg>
+<arg>Payments</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:41.787" endtime="20220923 09:30:42.293"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${whichToken}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:42.294" endtime="20220923 09:30:42.808"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-scope-cell' and contains(.,'${scope}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:42.808" endtime="20220923 09:30:43.317"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:43.317" endtime="20220923 09:30:43.831"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:43.832" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Payments Token')]//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:30:43.832" endtime="20220923 09:30:44.907"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-modal__container dc-modal__container--small dc-modal__container--enter-done']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:44.907" endtime="20220923 09:30:45.421"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:45.421" endtime="20220923 09:30:45.935"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:45.936" level="INFO">Clicking element '//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]'.</msg>
+<status status="PASS" starttime="20220923 09:30:45.935" endtime="20220923 09:30:47.004"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${whichToken}')]</arg>
+<arg>30</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:47.004" endtime="20220923 09:30:47.530"/>
+</kw>
+<status status="PASS" starttime="20220923 09:30:41.786" endtime="20220923 09:30:47.530"/>
+</kw>
+<kw name="Delete Token" library="resources">
+<arg>${trading_information_token}</arg>
+<arg>Trading information</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:47.532" endtime="20220923 09:30:48.047"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${whichToken}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:48.047" endtime="20220923 09:30:48.560"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-scope-cell' and contains(.,'${scope}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:48.561" endtime="20220923 09:30:49.069"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:49.069" endtime="20220923 09:30:49.583"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${whichToken}')]//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:49.584" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Trading information Token')]//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:30:49.583" endtime="20220923 09:30:50.647"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-modal__container dc-modal__container--small dc-modal__container--enter-done']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:50.647" endtime="20220923 09:30:51.163"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:51.163" endtime="20220923 09:30:51.676"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:51.677" level="INFO">Clicking element '//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]'.</msg>
+<status status="PASS" starttime="20220923 09:30:51.676" endtime="20220923 09:30:52.737"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${whichToken}')]</arg>
+<arg>30</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:52.737" endtime="20220923 09:30:53.250"/>
+</kw>
+<status status="PASS" starttime="20220923 09:30:47.531" endtime="20220923 09:30:53.250"/>
+</kw>
+<status status="PASS" starttime="20220923 09:30:30.227" endtime="20220923 09:30:53.250"/>
+</test>
+<test id="s1-t10" name="Delete Admin Token" line="334">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:53.250" endtime="20220923 09:30:53.761"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${admin_token}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:53.761" endtime="20220923 09:30:54.271"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-scope-cell da-api-token__table-scope-cell-admin' and contains(.,'Admin')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:54.272" endtime="20220923 09:30:54.779"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:54.779" endtime="20220923 09:30:55.299"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${admin_token}')]//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:55.300" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'Admin Token')]//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:30:55.300" endtime="20220923 09:30:56.362"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-modal__container dc-modal__container--small dc-modal__container--enter-done']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:56.362" endtime="20220923 09:30:56.880"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:56.880" endtime="20220923 09:30:57.392"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:30:57.393" level="INFO">Clicking element '//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]'.</msg>
+<status status="PASS" starttime="20220923 09:30:57.392" endtime="20220923 09:30:58.447"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${admin_token}')]</arg>
+<arg>30</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:58.447" endtime="20220923 09:30:58.976"/>
+</kw>
+<status status="PASS" starttime="20220923 09:30:53.250" endtime="20220923 09:30:58.976"/>
+</test>
+<test id="s1-t11" name="Delete All Scopes Token" line="345">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:58.977" endtime="20220923 09:30:59.488"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${all_scopes_token}')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:30:59.489" endtime="20220923 09:31:00.002"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-scopes-cell-block' and contains(.,'Read') and contains(.,'Trade') and contains(.,'Payments') and contains(.,'Trading information')]//*[@class='da-api-token__table-scope-cell da-api-token__table-scope-cell-admin' and contains(.,'Admin')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:31:00.002" endtime="20220923 09:31:00.517"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:31:00.518" endtime="20220923 09:31:01.029"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="da-api-token__table-cell-row" and contains(.,'${all_scopes_token}')]//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:31:01.030" level="INFO">Clicking element '//*[@class="da-api-token__table-cell-row" and contains(.,'All Scopes Token')]//*[@class='dc-icon dc-clipboard da-api-token__delete-icon']'.</msg>
+<status status="PASS" starttime="20220923 09:31:01.029" endtime="20220923 09:31:02.093"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-modal__container dc-modal__container--small dc-modal__container--enter-done']</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:31:02.094" endtime="20220923 09:31:02.609"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220923 09:31:02.609" endtime="20220923 09:31:03.120"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 09:31:03.121" level="INFO">Clicking element '//*[@class='dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-dialog__button' and contains(.,'Yes, delete')]'.</msg>
+<status status="PASS" starttime="20220923 09:31:03.121" endtime="20220923 09:31:04.190"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>//*[@class='da-api-token__table-cell-row' and contains(.,'${all_scopes_token}')]</arg>
+<arg>30</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20220923 09:31:04.191" endtime="20220923 09:31:04.704"/>
+</kw>
+<status status="PASS" starttime="20220923 09:30:58.977" endtime="20220923 09:31:04.705"/>
+</test>
+<status status="PASS" starttime="20220923 09:27:57.070" endtime="20220923 09:31:04.707"/>
+</suite>
+<statistics>
+<total>
+<stat pass="11" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="11" fail="0" skip="0" id="s1" name="APItoken">APItoken</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
